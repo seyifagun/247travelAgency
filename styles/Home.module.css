@@ -1,0 +1,306 @@
+.ant_modal_title_custom {
+  margin: 0;
+  color: #0043a4;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 22px;
+  word-wrap: break-word;
+}
+
+
+.containercustom {
+  background-color: rgba(0, 149, 255, 0.1);
+  /* Added padding top to the style  */
+  /* padding-top: 82px; */
+}
+
+.sortAreaCta {
+    /* margin: 1rem 2rem; */
+    /* margin-bottom: 1.5rem; */
+    box-sizing: border-box;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid; */
+    width: 100%;
+    padding-top: 12px;
+}
+
+.sortAreaCta__sortSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* border: 1px solid #000; */
+  /* padding: 1rem 0.5rem; */
+}
+
+.sortAreaCta__sortSection .sortSpan {
+  font-weight: 700;
+  color: #0043a4;
+}
+.sortAreaCta__sortSection span {
+  font-size: 14px;
+  line-height: 14px;
+}
+.sortAreaCta__sortSection .sortOptions {
+  /* border: 1px solid #000; */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sortAreaCta__sortSection .sortOptions .active {
+  background-color: #0043a4;
+  color: #fff;
+}
+.sortAreaCta__sortSection .sortOptions__option {
+  padding: 0.5rem 1rem;
+  border: 1px solid #0043a4;
+  color: #0043a4;
+  border-radius: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+.sortAreaCta__sortSection .sortOptions__option:hover {
+  background-color: #0043a4;
+  color: #fff;
+}
+
+.sort_div_custom, .hideCalendarDesktop {
+    background-color: #0043a4;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.sort_div_custom, .hideCalendarDesktop svg {
+    color: #fca62b;
+}
+.hideCalendarDesktop {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.actionPanelHeader {
+  background-color: #0043a4;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panelName {
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+}
+
+.priceName {
+  font-weight: 700;
+  color: #0043a4;
+  text-align: left;
+}
+
+.resetLabel {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.restIconCase {
+  padding: 0rem;
+}
+
+.departureArrivalTime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.departureTime {
+  font-weight: 700;
+  color: #0043a4;
+  margin-bottom: 0px !important;
+}
+
+.departureAlpha {
+  color: #0043a4;
+}
+
+.departureClass {
+  color: #0043a4;
+  font-size: 15px;
+}
+
+.departurePrice {
+  font-weight: 700;
+  color: #0043a4;
+  font-size: 15px;
+}
+
+.bookBtn {
+  background: #0043a4;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.bookBtn:hover {
+  font-weight: 800;
+  background: #0043a4;
+}
+
+.airlineIconCase {
+  padding: 0.5rem;
+}
+
+.clockHours {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeLabel {
+  font-size: 9px;
+}
+
+.sliderAntd {
+  margin: 0;
+}
+
+.oneStop {
+  text-align: center;
+}
+
+.stopsDiv {
+  border: 1px solid brown;
+  box-sizing: border-box;
+  background: #fff;
+  width: 50%;
+  /* margin: 0 auto; */
+  color: #0043a4;
+  display: flex;
+  justify-content: center;
+}
+
+.cheapflightStyle {
+  line-height: normal;
+  padding-left: 0.4rem;
+}
+
+.btnAnt {
+  color: #fff;
+  background-color: #0043a4;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.btnAnt:hover {
+  color: #0043a4;
+  background-color: orange;
+  font-weight: 600;
+  margin-top: 1rem;
+  border: 1px solid orange;
+}
+
+/* ************************************** */
+
+.arrivalRow {
+  display: flex;
+  align-items: center;
+}
+
+.fetchOutput {
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0043a4;
+}
+
+.locationCode {
+  color: #0043a4;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.arrivalTime {
+  color: #0043a4;
+  font-weight: 600;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.bookingSummary {
+  border: 2px solid #0043a4;
+  background-color: #fff;
+}
+
+.bookingSummarySubmenu {
+  border-top: 2px solid #0043a4;
+}
+
+.bookingSummarySubmenu > p {
+  padding: 0.5rem 2rem;
+  margin-bottom: 0;
+  color: #0043a4;
+  font-size: 13px;
+}
+
+/* ****************************************************** */
+
+.fareBreakdown {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fareBreakdown > p {
+  margin-bottom: 0.5rem;
+  font-size: 13px;
+}
+
+.fareBreakdownTotal {
+  display: flex;
+  justify-content: space-between;
+  background-color: "#0043a4";
+  padding: "0.5rem 1.2rem";
+  color: "#fff";
+}
+
+.fareBreakdownTotal > p {
+  display: flex;
+  justify-content: space-between;
+  background-color: "#0043a4";
+  padding: "0.5rem 1.2rem";
+  color: "#fff";
+  font-size: 13px;
+}
+
+.loadMoreButton {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.callToActionDisplay {
+  border: 1px solid !important;
+}
+
+.carouselContainer {
+  border: 4px solid #000 !important;
+}
+
+.carouselImage img {
+  border: 4px solid #000 !important;
+}
+
+.ant-carousel .slick-dots li button {
+  display: none;
+}

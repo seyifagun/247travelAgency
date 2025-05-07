@@ -1,0 +1,9 @@
+.custom-dropdown-travelerAndClass{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.flightClass-wrapper {
+    margin: 0 0.5rem;
+}

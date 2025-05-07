@@ -1,0 +1,170 @@
+.career-banner{
+    position : relative;
+}
+
+.careerbanner-text{
+    position: absolute;
+    width: 30%;
+    bottom: 150px;
+}
+
+.careerbanner-text > h1, .jobOpenings-text-title > h3{
+    color : #0043a4;
+}
+.careerbanner-text > h1 > span{
+    color : orange;
+    font-weight: 600;
+}
+
+.careerbanner-text-wrapper{
+    padding: 0 10em;
+}
+
+.joinUs-div-header > h1{
+    color:#0043a4;
+    font-weight: 600;
+}
+
+.joinUs-div-text > p > span{
+    color: orange;
+}
+
+.jobOpenings-div{
+    background-color: rgba(0, 149, 255, 0.1)
+}
+
+@media  screen and (max-width:320px) {
+    .careerbanner-text > h1, .jobOpenings-text-title > h3 {
+        font-size: 10px;
+    }
+
+    .careerbanner-text > p{
+        font-size: 7px !important;
+    }
+
+    .careerbanner-text{
+        left: 30px;
+        bottom: 15px;
+    }
+    .jobOpenings-text{
+        float: none;
+        width: 100% !important;
+    }
+
+    .jobOpenings-img.mt-5{
+        display:none !important;
+    }
+}
+/* *********************** */
+@media  screen and (min-width:321px) and (max-width:375px) {
+    .careerbanner-text > h1, .jobOpenings-text-title > h3 {
+        font-size: 10px;
+    }
+    
+    .jobOpenings-img {
+        width: 100%;
+    }
+
+    .careerbanner-text > p{
+        font-size: 10px !important;
+    }
+
+    .careerbanner-text{
+        left: 30px;
+        bottom: 15px;
+    }
+
+    .jobOpenings-text{
+        float: none;
+        width: 100% !important;
+    }
+
+    .jobOpenings-img.mt-5{
+        display:none !important;
+    }
+}
+/* ************************ */
+@media  screen and (min-width:376px) and (max-width:425px) {
+    .careerbanner-text > h1, .jobOpenings-text-title > h3 {
+        font-size: 12px;
+    }
+
+    .jobOpenings-img {
+        width: 100%;
+    }
+
+    .careerbanner-text > p{
+        font-size: 10px !important;
+    }
+
+    .careerbanner-text{
+        left: 30px;
+        bottom: 15px;
+    }
+
+    .jobOpenings-text{
+        float: 0;
+        width: 100%;
+    }
+    .jobOpenings-img.mt-5{
+        display:none !important;
+    }
+}
+/* ************************ */
+@media  screen and (min-width:426px) and (max-width:768px) {
+    .careerbanner-text > h1, .jobOpenings-text-title > h3 {
+        font-size: 20px;
+    }
+
+    .jobOpenings-img {
+        width: 100%;
+    }
+
+    .careerbanner-text > p{
+        font-size: 13px !important;
+    }
+
+    .careerbanner-text{
+        left: 50px;
+        bottom: 70px;
+    }
+
+    .jobOpenings-text{
+        float: 0;
+        width: 100%;
+    }
+
+    .jobOpenings-text {
+        float: right;
+        width: 70%;
+    }
+}
+/* ************************ */
+@media  screen and (min-width:769px) and (max-width:1024px) {
+    .careerbanner-text > h1, .jobOpenings-text-title > h3 {
+        font-size: 30px;
+    }
+
+    .jobOpenings-img {
+        width: 100%;
+    }
+
+    .careerbanner-text > p{
+        font-size: 15px !important;
+    }
+
+    .careerbanner-text{
+        left: 50px;
+        bottom: 90px;
+    }
+
+    .jobOpenings-text{
+        float: 0;
+        width: 100%;
+    }
+
+    .jobOpenings-text {
+        float: right;
+        width: 70%;
+    }
+}

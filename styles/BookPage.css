@@ -1,0 +1,227 @@
+.ant-card-head-custom >  .ant-card-head {
+    padding: 0 24px;
+    background: #0043a4;
+    color: white;
+} 
+
+.ant-card-extra > .small{
+    color: rgba(252, 166, 43, 0.5);
+} 
+
+.ant-card.ant-card-bordered.ant-card-type-inner.ant-card-body-custom {
+    padding: 16px 48px;
+}
+
+.filter-Btn{
+    color : #fff;
+    background: #0043a4;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: orange;
+    border-color: orange !important;
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner {
+    border-color: orange !important;
+}
+
+.ant-collapse-borderless > .ant-collapse-item {
+    border-bottom: 25px solid #c9defd !important;
+}
+
+.ant-form-item {
+    margin-bottom: 0;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border: none;
+}
+.ant-modal-body> p{
+    font-size : 15px !important;
+}
+
+.ant-btn-primary{
+    color: white;
+    background-color:#0043a4;
+}
+.ant-btn-primary:focus{
+    color: orange !important;
+    background-color:#0043a4;
+}
+.ant-btn-primary:hover{
+    color: white;
+    background-color:#0043a4;
+}
+button.bookpage-continue-btn.btn.btn-primary {
+    color: #fff;
+}
+button.bookpage-continue-btn.btn.btn-primary :focus{
+    color: #0043a4;
+    background-color: orange;
+}
+
+.passenger-form-label {
+    text-align: left;
+    color: #1890ff;
+    padding-bottom: 5px;
+    font-weight: normal;
+    display: inline-block;
+}
+
+.passenger-form-DOB-label {
+    text-align: left;
+    color: orange;
+    padding-bottom: 5px;
+    font-weight: normal;
+    font-weight: 600;
+}
+
+.downscale-div{
+    transform:rotate(180deg);
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.price-panel.price-movement-warning{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .bookpage-itinerary-border{
+    border-right: 1px solid #0043a4;
+    border-left: 1px solid #0043a4;
+    border-bottom: 1px solid #0043a4;
+} */
+
+.bookpage-airline-logo-name{
+    margin-left : 0.3rem
+}
+.bookpage-itinerary-header-title{
+    justify-content:center;
+    background:#0043a4;
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+    padding: .5rem 0;
+}
+
+/* MEDIA QUERY FOR BOOKPAGE SECTION */
+@media screen and (max-width:768px){
+    .ant-card.ant-card-bordered.ant-card-type-inner.ant-card-body-custom {
+        padding: 0;
+    }
+    .bookpage-input-field{
+        padding:0;   
+    }
+    .ant-card-body-custom > .ant-card-body{
+        padding: 0;
+    }
+    .traveler-input{
+        margin-top: 1rem;
+    }
+    .ant-card-head-custom > .ant-card-body{
+        padding:20px;
+    }
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-item, .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+        padding-right: 0px;
+    }
+    .flight-price-result{
+        justify-content:center;
+        padding-top:1rem;
+    }
+    .flight-class-result{
+        justify-content:center;
+        display:flex;
+    }
+    .stops_hr{
+        display:none;
+    }
+    .drawercustom-desktop{
+        display: none;
+    }
+
+    .ant-drawer-content-wrapper{
+        width: 100% !important;
+    }
+}
+@media screen and (min-width:769px) and (max-width:990px){
+    .ant-card.ant-card-bordered.ant-card-type-inner.ant-card-body-custom {
+        padding: 0;
+    }
+    .bookpage-input-field{
+        padding:0;   
+    }
+    .ant-card-body-custom > .ant-card-body{
+        padding: 0;
+    }
+    .traveler-input{
+        margin-top: 1rem;
+    }
+    .ant-card-head-custom > .ant-card-body{
+        padding:25px;
+    }
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-item, .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+        padding-right: 0px;
+    }
+    .drawercustom-mobile{
+        display:none;
+    }
+    
+}
+@media screen and (min-width:991px) and (max-width:1024px){
+    .ant-card.ant-card-bordered.ant-card-type-inner.ant-card-body-custom {
+        padding: 0;
+    }
+    .bookpage-input-field{
+        padding:0;   
+    }
+    .ant-card-body-custom > .ant-card-body{
+        padding: 0;
+    }
+    .traveler-input{
+        margin-top: 1rem;
+    }
+    .ant-card-head-custom > .ant-card-body{
+        padding:25px;
+    }
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-item, .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+        padding-right: 0px;
+    }
+    .drawercustom-mobile{
+        display:none;
+    }
+    
+}
+@media screen and (min-width:1025px) and (max-width:1399px){
+    .ant-card.ant-card-bordered.ant-card-type-inner.ant-card-body-custom {
+        padding: 0;
+    }
+    .bookpage-input-field{
+        padding:0;   
+    }
+    .ant-card-body-custom > .ant-card-body{
+        padding: 0;
+    }
+    .traveler-input{
+        margin-top: 1rem;
+    }
+    .ant-card-head-custom > .ant-card-body{
+        padding:25px;
+    }
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-item, .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+        padding-right: 0px;
+    }
+    .drawercustom-mobile{
+        display:none;
+    }
+    
+}
+
+@media screen and (min-width:1400px){
+    .drawercustom-mobile{
+        display:none;
+    }
+    
+}

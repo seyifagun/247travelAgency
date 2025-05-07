@@ -1,0 +1,909 @@
+@mixin d-flex-sb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin topLine {
+    border-top: 2px dashed rgba(170, 216, 248, 0.6);
+    padding-top: 8px;
+}
+.fDM_Container {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    transition: 0.5s all ease-in-out;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: #edf8ff;
+    color: #2b2b2b;
+    overflow-y: scroll;
+    // border: 4px solid #000 !important;
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 6px;
+    }
+    p {
+        font-size: 14px !important;
+        margin: 0;
+    }
+
+    .fDMobileTopBar {
+        background-color: #edf8ff;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        position: fixed;
+        top: 0;
+        // left: 0;
+        z-index: 35;
+        width: 100%;
+        &__icon {
+            cursor: pointer;
+        }
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .fDShareItinerary {
+            background-color: #0043a4;
+            color: #ffffff;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+            font-size: 14px;
+            font-weight: 600;
+            &__icon {
+                // border: 1px solid #fff;
+                display: inline-flex;
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    path {
+                        stroke: #ffffff;
+                    }
+                }
+            }
+        }
+        .SfContainer {
+            position: absolute;
+            top: 64px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            padding: 8px 16px;
+            z-index: 22;
+
+            padding-top: 32px;
+            &__Overlay {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#000000, 0.6);
+                top: 064px;
+                left: 0;
+                z-index: 20;
+            }
+            &__notificationMsg {
+                // border: 1px solid;
+                padding: 4px 8px;
+                position: fixed;
+                top: 0%;
+                top: 62px;
+                left: 0;
+                width: 100%;
+                font-size: 14px;
+                background-color: #edf8ff;
+                color: #00337b;
+                text-align: center;
+                animation: ntfSlideIn 0.3s ease;
+                z-index: 1;
+                opacity: 1;
+
+                @keyframes ntfSlideIn {
+                    0% {
+                        top: -100%;
+                        opacity: 0;
+                    }
+                    100% {
+                        top: 0%;
+                        top: 62px;
+                    }
+                }
+            }
+            &__notificationMsgClose {
+                @extend .SfContainer__notificationMsg;
+                top: -100%;
+                animation: ntfSlideOut 0.3s ease;
+                opacity: 0;
+                position: fixed;
+                z-index: 1;
+
+                @keyframes ntfSlideOut {
+                    // 0% {
+                    //     top: 0%;
+                    // }
+                    100% {
+                        top: -100%;
+                    }
+                }
+            }
+            .SfSendBtn {
+                background-color: #0043a4;
+                padding: 0px;
+                color: #ffffff;
+                font-weight: 600;
+            }
+            &__notificationMsgError {
+                @extend .SfContainer__notificationMsg;
+                background-color: #ffd7d7;
+                color: #ed1000;
+            }
+            &__notificationMsgCloseError {
+                @extend .SfContainer__notificationMsgClose;
+                background-color: #ffd7d7;
+                color: #ed1000;
+            }
+        }
+        .SfContainerClose {
+            padding-top: 0px;
+            padding: 8px 16px;
+            @extend .SfContainer;
+        }
+        .SfParentBox {
+            transition: all 2s ease-in-out;
+        }
+    }
+    .commendingRemark {
+        background-color: #fffcf8;
+        padding: 8px 12px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 10px auto;
+        // display: none;
+        padding-top: 58px;
+        &__like {
+            background-color: #945701;
+            display: inline-block;
+            padding: 12px;
+            border-radius: 100%;
+            svg {
+                margin: auto;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        p {
+            color: #945701;
+            width: 100%;
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+    .upperNavigation {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        color: #9c9c9c;
+        position: sticky;
+        top: 57.2px;
+        z-index: 24;
+        &__itinery,
+        &__rules {
+            padding: 8px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+        &__rules {
+            &:hover {
+                background-color: rgba(0, 68, 164, 0.1);
+                color: #0043a4;
+            }
+        }
+        .active {
+            background-color: #0043a4;
+            color: #ffffff;
+        }
+    }
+
+    .segmentContainer {
+        padding: 16px 0px;
+        // border: 1px solid #000 !important;
+        // min-width: 100vw;
+
+        &__header {
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding-left: 16px;
+            color: #0043a4;
+        }
+        &__segment {
+            padding: 0px 16px;
+            .airline {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                font-size: 18px;
+                color: #0043a4;
+            }
+            .segmentInfo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 12px 0px;
+
+                &__departure,
+                &__arrival {
+                    .iataCodeTimer {
+                        color: #0043a4;
+                        font-size: 18px;
+                        @media (max-width: 375px) {
+                            font-size: 14px;
+                        }
+                        // .date, .state {
+                        //     border: 1px solid #000;
+                        //     @media (max-width: 320px) {
+                        //         font-size: 12px;
+                        //     }
+                        // }
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+                &__segmentDuration {
+                    font-size: 12px;
+                    width: 35%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 4px;
+                    .time {
+                        color: #0043a4;
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 4px;
+                        }
+                    }
+                    .mCabin {
+                        font-weight: 600;
+                        color: #00337b;
+                    }
+                }
+                &__arrival {
+                    text-align: right;
+                }
+            }
+        }
+        .segementButtomInfo {
+            background-color: #aad8f8;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            p {
+                span {
+                    font-weight: 600;
+                }
+            }
+            .waitingTime {
+                display: flex;
+                align-items: center;
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 4px;
+                    path {
+                        fill: #0043a4;
+                    }
+                }
+            }
+        }
+        .segmentDetailsContainer {
+            // border: 1px solid #000;
+            margin-top: 24px;
+            border-bottom: 1px solid #aad8f8;
+            .segmentDetails {
+                // border: 1px solid #000;
+
+                .segementButtomInfo {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+        .segmentBaggageInfo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            background-color: rgba(#1890ff, 0.1);
+            border: 1px solid rgba(#1890ff, 0.4);
+            margin-top: 12px;
+            & > .detail {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+        }
+    }
+
+    .flightPrice {
+        background-color: #03214b;
+        color: #fff;
+        @include d-flex-sb();
+        height: 64px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        z-index: 24;
+        &__price,
+        &__book {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+        }
+        &__price {
+            font-size: 20px;
+            font-weight: 800;
+        }
+        &__book {
+            justify-content: center;
+            button {
+                padding: 8px 16px;
+                background-color: #0043a4;
+                margin-left: auto;
+            }
+        }
+        .midLine {
+            border: 0px solid rgba(#888888, 0.5);
+            border-width: 0.4px;
+            height: 50%;
+        }
+    }
+
+    .fareBreakdown {
+        background-color: #03214b;
+        color: #fff;
+        padding: 24px;
+        padding-bottom: 54px;
+        position: relative;
+        margin-bottom: 16px;
+        &__title {
+            font-weight: 800;
+            color: #fff;
+            font-size: 16px !important;
+        }
+        &__details {
+            .item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 8px;
+            }
+            .baseTaxPrice {
+                border-top: 1px solid rgba(170, 216, 248, 0.5);
+                padding-top: 8px;
+            }
+        }
+        .totalP {
+            z-index: 25;
+            position: absolute;
+            bottom: 30px;
+        }
+    }
+    .fareRules {
+        // border: 1px solid;
+        margin: 24px;
+        margin-bottom: 48px;
+
+        &__title {
+            padding: 16px 24px;
+            background-color: #fff;
+            color: #00337b;
+            border-radius: 8px;
+            width: 100%;
+            margin-bottom: 16px;
+            font-size: 14px !important;
+        }
+
+        .rulesContainer {
+            ol {
+                padding: 0;
+            }
+            li {
+                list-style: none;
+                // border: 1px solid;
+                padding: 8px;
+                padding-top: 0px;
+                margin-bottom: 8px;
+                position: relative;
+                font-size: 12px;
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgba(#006aff, 0.5);
+                    content: "";
+                }
+                &:last-child {
+                    margin-bottom: 0px;
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            .rulesContainer__eachRule__title {
+                font-weight: 600;
+                color: #0043a4;
+            }
+            .rulesContainer__eachRule__content {
+                font-size: 12px !important;
+                max-height: 300px;
+                overflow-y: auto;
+                &::-webkit-scrollbar {
+                    width: 8px;
+                    background-color: rgba($color: #0043a4, $alpha: 0.2);
+                }
+                &::-webkit-scrollbar-thumb {
+                    // width: 100%;
+                    background-color: #0043a4;
+                    color: #0043a4;
+                    border: 1px solid;
+                }
+            }
+        }
+    }
+}
+.fDM_ContainerActive {
+    left: 0;
+    transition: 0.5s all ease-in-out;
+}
+
+// FlightFilter styles for mobile here
+.FfContainer {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 !important;
+    }
+    position: fixed;
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    transition: 0.5s all ease-in-out;
+    background-color: #fff;
+    padding: 16px;
+    padding-top: 68px;
+    overflow-y: scroll;
+
+    .FfTopBar {
+        background-color: #0043a4;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: #fff;
+        padding: 12px 16px;
+        font-size: 16px;
+        position: fixed;
+        z-index: 35;
+        top: 0;
+        // right: 0;
+        // left: 0;
+        left: inherit;
+        width: 100%;
+
+        &__backIcon {
+            // border: 1px solid #fff;
+            cursor: pointer;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__reset {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            margin-left: auto;
+        }
+    }
+    .FfBottomBar {
+        position: fixed;
+        z-index: 35;
+        bottom: 0;
+        left: inherit;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: #03214b;
+        &__filter,
+        &__apply {
+            width: 100%;
+            height: 100%;
+            padding: 12px;
+            background-color: #03214b;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__apply {
+            cursor: pointer;
+            &:hover {
+                background-color: #00337b;
+            }
+        }
+        .FfDivider {
+            // border: 0.4px solid #707070;
+            width: 3px;
+            height: 24px;
+            background-color: #888888;
+        }
+    }
+
+    .FfSectionTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        margin-top: 20px;
+        // &:nth-child(1) {
+        //     margin-top: 0;
+        // }
+        h3 {
+            font-weight: 600;
+        }
+    }
+
+    .FfPriceFilter {
+        // border: 1px solid #000;
+        padding-bottom: 12px;
+
+        &__filter {
+            // border: 1px solid #000;
+
+            .FfFilterValues {
+                display: flex;
+                justify-content: space-between;
+            }
+            .FfSliderContainer {
+                height: 64px;
+                // border: 1px solid #000;
+                margin-top: 8px;
+                display: flex;
+                align-items: center;
+
+                &__slider {
+                    width: 100%;
+                    height: 100%;
+                    // background-color: #FCA62B;
+                    display: flex;
+                    align-items: center;
+                    .FfSlider {
+                        -webkit-appearance: none;
+                        // border: 1px solid #000;
+                        width: 100%;
+                        background: #fca62b;
+                        outline: none;
+                        height: 4px;
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            background: #fca62b;
+                        }
+                        &::-moz-range-thumb {
+                            -webkit-appearance: none;
+                            background: #fca62b;
+                            outline: none;
+                            border: none;
+                            position: relative;
+                            &::after {
+                                width: 48px;
+                                height: 48px;
+                                border-radius: 100%;
+                                content: "";
+                                position: absolute;
+                                background: #fca62b;
+                            }
+                        }
+                    }
+                    // input[type='range'] {
+                    //     border: 1px solid #000;
+                    //     width: 100%;
+                    //     background: #FCA62B;
+                    //     outline: none;
+                    //     height: 4px;
+                    // }
+                    &::-moz-range-thumb {
+                        background: #fca62b;
+                    }
+                    .FfSliderThumb {
+                        // position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        background-color: #fca62b;
+                        border-radius: 100%;
+                        transform: translateX(800%);
+                        position: relative;
+                        &::before {
+                            content: "";
+                            background-color: rgba(#fca62b, 0.1);
+                            width: 64px;
+                            height: 64px;
+                            border-radius: 100%;
+                            position: absolute;
+                            top: -150%;
+                            left: -150%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .FfStops {
+        @include topLine();
+        padding-bottom: 24px;
+        &__filterOption {
+            display: flex;
+            justify-content: space-between;
+            .FfOption {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 14px;
+                &__numBox {
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid #fca62b;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 6px;
+                    &:hover {
+                        background-color: #fca62b;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+    .FfAirlines {
+        @include topLine();
+        padding-bottom: 28px;
+        &__checkbox {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .FfCheckboxOption {
+            display: flex;
+            justify-content: space-between;
+            &__airline {
+                position: relative;
+                // padding-left: 30px;
+                input[type="checkbox"] {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 34;
+                    opacity: 0;
+                }
+                input[type="checkbox"]:checked ~ .checker {
+                    background-color: #fca62b;
+                }
+                .checker {
+                    width: 22px;
+                    height: 22px;
+                    border: 1px solid #fca62b;
+                    position: absolute;
+                    left: 0;
+                }
+                label {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+    .FfTakeOffFlight {
+        @include topLine();
+        padding-bottom: 20px;
+
+        &__flightsGrp {
+            .FfFlight {
+                &__duration {
+                    height: 56px;
+                    position: relative;
+                    margin-bottom: 12px;
+                    .FfLine {
+                        width: 100%;
+                        height: 3px;
+                        background-color: #e6e5e5;
+                        position: absolute;
+                        top: 50%;
+                        &::after {
+                            background-color: #fca62b;
+                            height: 100%;
+                            content: "";
+                            width: 90%;
+                            position: absolute;
+                            left: 5%;
+                        }
+                        .FfIconLeft {
+                            position: absolute;
+                            bottom: 2px;
+                            left: 4%;
+                        }
+                        .FfIconRight {
+                            position: absolute;
+                            bottom: 2px;
+                            right: 4%;
+                        }
+                    }
+                    .FfStartingTime,
+                    .FfStoppingTime {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                    .FfStoppingTime {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .FfReturnFlight {
+        margin-bottom: 40px;
+    }
+}
+.FfContainerActive {
+    left: 0%;
+    transition: 0.5s all ease-in-out;
+}
+
+//Sort filter style
+.FsContainer {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 !important;
+    }
+    position: fixed;
+    // bottom: 52px;
+    bottom: 6%;
+    background-color: #ffffff;
+    z-index: 45;
+    padding: 24px 36px;
+    border-radius: 24px 24px 0px 0px;
+    width: 100%;
+    // left: 10%;
+    // right: 10%;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(0px);
+    animation: bumpUp ease 400ms;
+    @keyframes bumpUp {
+        from {
+            transform: translateY(24px);
+            // opacity: 0;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 24px;
+        margin-bottom: 16px;
+        h3 {
+            font-size: 20px !important;
+            font-weight: 600;
+        }
+        .FsCloseIcon {
+            // border: 1px solid #000;
+            padding: 4px;
+            display: inline-flex;
+            border-radius: 8px;
+            background-color: #ffffff;
+            cursor: pointer;
+            &:hover {
+                background-color: #e8e8e8;
+            }
+        }
+    }
+    &__options {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+
+        .FcOptionUp,
+        .FcOptionDown {
+            display: flex;
+            justify-content: space-between;
+            // border: 1px solid #000;
+            gap: 6px;
+            .FsOptionItem {
+                width: 100%;
+                // border: 1px solid #000;
+                padding: 8px;
+                padding-left: 0px;
+                position: relative;
+                padding-left: 26px;
+                input[type="radio"] {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+                input[type="radio"]:checked ~ .FsChecker {
+                    background-color: #006aff;
+                    border: none;
+                }
+                input[type="radio"]:checked ~ .FsLabel {
+                    color: #006aff;
+                }
+                .FsChecker {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100%;
+                    border: 1px solid #0043a4;
+                    background-color: none;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                }
+                // label {
+                //     // padding-left: 26px;
+                // }
+            }
+            .FsOptionItemActive {
+                @extend .FsOptionItem;
+                .FsChecker {
+                    background-color: #006aff;
+                    border: none;
+                }
+                input[type="radio"] {
+                    background-color: #006aff;
+                }
+                .FsLabel {
+                    color: #006aff;
+                }
+            }
+        }
+    }
+}
+
+.FsContainerActive {
+    // bottom: -100%;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}

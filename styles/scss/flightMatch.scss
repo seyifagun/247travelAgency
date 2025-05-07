@@ -1,0 +1,711 @@
+// .newContainer {
+//     border: 1px solid #000;
+//     max-width: 1320px;
+//     margin: 0 auto;
+// }
+
+@mixin line {
+    width: 90%;
+    height: 1px;
+    background-color: #fca62b;
+    position: relative;
+}
+@mixin lineBefore {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    background-color: #fca62b;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+@mixin lineAfter {
+    position: absolute;
+    top: -3px;
+    right: 0;
+    background-color: #fca62b;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+@mixin lineParent {
+    @include line();
+    &::before {
+        @include lineBefore();
+    }
+    &::after {
+        @include lineAfter();
+    }
+}
+
+@mixin d-flex {
+    display: flex;
+}
+
+.line {
+    @include lineParent();
+}
+
+.flightDescriptionContainer {
+    background-color: #fff;
+    // border: 1px solid;
+    margin-top: 2rem;
+    // padding: 24px;
+    // @media (max-wdith: 768px) {
+    //     padding: 0px;
+    // }
+    p,
+    h5 {
+        margin: 0;
+    }
+    p {
+        font-size: 14px !important;
+    }
+
+    .container {
+        width: 100%;
+        /* border: 1px solid #000; */
+        padding: 20px !important;
+
+        .details {
+            display: flex;
+            border: 0.5px solid #1890ff;
+            border-bottom: none;
+            width: auto;
+            .flightDetails {
+                width: 80%;
+                // min-height: 300px;
+                .header {
+                    background-color: #0043a4;
+
+                    display: flex;
+                    justify-content: space-between;
+                    .item {
+                        width: 100%;
+                        padding: 8px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #0043a4;
+                        border-right: none;
+                        color: #fff;
+                        &:last-child {
+                            border-right: 0.5px solid #1890ff;
+                        }
+                    }
+                }
+                .BodyContent {
+                    // border: 1px solid #000;
+                    .BodyContentItem {
+                        display: flex;
+                        justify-content: space-between;
+                        .item {
+                            width: 100%;
+                            border: 0.5px solid #1890ff;
+                            border-right: none;
+                            border-bottom: none;
+                            border-top: none;
+                            padding: 12px;
+
+                            display: flex;
+                            /* width: 100%; */
+                            align-items: center;
+                            justify-content: center;
+                            // border: 1px solid #000;
+                            &:last-child {
+                                border-right: 0.5px solid #1890ff;
+                            }
+                            &:first-child {
+                                border-left: none;
+                            }
+                            &:nth-child(even) {
+                                border-top: none;
+                            }
+                            &__date {
+                                color: #0043a4;
+                                font-size: 10px !important;
+                                font-weight: 550;
+                                @media screen and (max-width: 1399px) {
+                                    font-size: inherit;
+                                }
+                            }
+                        }
+                        .airline {
+                            // display: flex;
+                            justify-content: left;
+                            gap: 8px;
+                        }
+                        // For data under departure, duration, and arrival
+                        .doubleCell {
+                            // border: 1px solid #000;
+                            flex-direction: column;
+                            align-items: center;
+                            h5 {
+                                font-size: 16px;
+                            }
+                            p {
+                                font-size: 12px;
+                            }
+                            .time {
+                                display: flex;
+                                align-items: center;
+                                gap: 4px;
+                                margin-bottom: 2px;
+                                svg {
+                                    color: #fca62b;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .flightPrice {
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                height: inherit;
+                align-content: center;
+                &__content {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+                .priceHeader {
+                    padding: 8px;
+                    display: flex;
+                    /* width: 100%; */
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #0043a4;
+                    /* border: 0.5px solid #1890ff; */
+                    border-right: none;
+                    color: #fff;
+                }
+                .amount {
+                    /* border: 0.5px solid #1890ff; */
+                    border-top: none;
+                    padding: 4px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    /* width: 100%; */
+                    // height: 76%;
+                    height: 40%;
+                    // margin-bottom: auto;
+                    width: 100%;
+                    font-weight: 700;
+                    color: #0043a4;
+                }
+                .book {
+                    padding: 8px 16px;
+                    background-color: #0043a4;
+                    color: #fff;
+                    font-weight: 700;
+                    width: fit-content;
+                    margin: 0 auto 8px;
+                    &:hover {
+                        background-color: #fca62b;
+                        color: #0043a4;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            border: 1px solid #1890ff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+            .item {
+                padding: 4px 8px;
+                cursor: pointer;
+
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                &:hover {
+                    background-color: rgba(24, 143, 255, 0.05);
+                }
+                .detail {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+
+                .detail svg {
+                    fill: #fca62b !important;
+                    height: 10px;
+                }
+                .svgRotate {
+                    svg {
+                        transform-origin: inherit;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        .bottomContainers {
+            .bottomContainer {
+                // position: absolute;
+                // top: 20px;
+                display: flex;
+                width: 100%;
+                gap: 8px;
+                // background-color: #fff;
+                z-index: 10;
+                // border: 3px solid #000;
+                .InfoContainer {
+                    width: 65%;
+                    display: flex;
+                    flex-direction: column;
+                    .flightInfo {
+                        width: 100%;
+                        border: 1px solid #1890ff;
+                        background-color: #fff;
+                        height: fit-content;
+                        &:nth-child(even) {
+                            border-bottom: 2px solid #1890ff;
+                        }
+                        .flightDestination {
+                            color: #0043a4;
+                            font-size: 16px;
+                            margin-bottom: 8px;
+                            padding: 24px 24px 0px;
+                        }
+                        .flightItinery {
+                            .flightSegment {
+                                // border: 3px solid;
+                                &:nth-child(even) .fullDetails {
+                                    /* border: 2px solid #000; */
+                                    padding-top: 10px !important;
+                                }
+                                .fullDetails {
+                                    display: flex;
+                                    align-items: flex-start;
+                                    gap: 48px;
+                                    padding: 8px 24px;
+                                    margin-bottom: 10px;
+                                    // border: 3px solid #000;
+                                    .logo {
+                                        display: flex;
+                                        align-items: flex-start;
+                                        // align-items: center;
+                                        gap: 8px;
+                                        width: 30%;
+                                        // p {
+                                        //     // width: 59.6px;
+                                        // }
+                                        img {
+                                            margin-top: 8px;
+                                        }
+                                        &__class {
+                                            width: fit-content;
+                                            font-size: 10px !important;
+                                            font-weight: 600;
+                                            color: #0043a4;
+                                            @media screen and (max-width: 1399px) {
+                                                font-size: inherit;
+                                            }
+                                        }
+                                    }
+                                    .content {
+                                        @include d-flex();
+                                        align-items: flex-start;
+                                        // gap: 48px;
+                                        // justify-self: flex-end;
+                                        justify-content: space-between;
+                                        width: 90%;
+                                        padding: 0px;
+
+                                        .location {
+                                            padding: 0;
+                                            // width: 100%;
+                                            p {
+                                                padding: 0;
+                                            }
+                                        }
+                                        .fromContent {
+                                            text-align: left;
+                                        }
+                                        .timeDuration {
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            justify-content: center;
+                                            // width: 100%;
+                                            .time {
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 4px;
+                                                margin-bottom: 2px;
+                                                // border: 1px solid #000;
+                                                // width: 100px;
+                                                justify-content: center;
+                                            }
+                                        }
+                                        .timeDuration > .time p {
+                                            width: fit-content;
+                                        }
+                                        .fromContent .fromDestination,
+                                        .toContent .toDestination {
+                                            display: flex;
+                                            gap: 4px;
+                                            p {
+                                                width: fit-content;
+                                            }
+                                            .time {
+                                                font-weight: 600;
+                                            }
+                                        }
+                                        .toContent {
+                                            text-align: right;
+                                            // width: 100%;
+                                            .toDestination {
+                                                justify-content: flex-end;
+                                            }
+                                        }
+                                    }
+                                }
+                                .bottomDetails {
+                                    background-color: #0043a4;
+                                    padding: 4px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .content {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 16px;
+                                        font-size: 12px;
+                                        background-color: transparent;
+                                        padding: 4px 24px;
+                                        p {
+                                            white-space: nowrap;
+                                            color: #fff;
+                                        }
+                                        .waiting {
+                                            span {
+                                                svg {
+                                                    width: 16px;
+                                                    height: 16px;
+                                                    margin-right: 4px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .rules {
+                    border: 1px solid #1890ff;
+                    padding: 24px 0px;
+                    padding-right: 24px;
+                    font-size: 13px;
+                    ol {
+                        li {
+                            list-style: none;
+                        }
+                        .eachRule {
+                            padding-top: 8px;
+                            padding-bottom: 12px;
+                            position: relative;
+                            border-bottom: 1px solid #1890ff;
+                            &::after {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 0.8px;
+                                background-color: #1890ff;
+                                content: "";
+                            }
+                            &:last-child {
+                                padding-bottom: 0px;
+                                border-bottom: none;
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                            &:first-child {
+                                padding-top: 0px;
+                            }
+                        }
+                        .eachRule__title {
+                            font-weight: 600;
+                            color: #0043a4;
+                        }
+                        .eachRule__content {
+                            // border: 1px solid #0043A4;
+                            max-height: 300px;
+                            overflow-y: auto;
+                            &::-webkit-scrollbar {
+                                width: 8px;
+                                background-color: rgba($color: #0043a4, $alpha: 0.2);
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                // width: 100%;
+                                background-color: #0043a4;
+                                color: #0043a4;
+                                border: 1px solid;
+                            }
+                        }
+                    }
+                }
+                .fareInfoParent {
+                    width: 35%;
+                    .fareInfo {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        padding: 0px !important;
+                        border: 1px solid #1890ff;
+                        border-top: none;
+                        height: fit-content;
+                        // margin-top: 6px;
+                        background-color: #fff;
+                        .title {
+                            padding: 10px 10px 20px;
+                        }
+                        .content {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+                            padding: 0px 10px;
+                            .price {
+                                width: fit-content;
+                            }
+                        }
+                        .contentItem {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            font-size: 12px;
+                        }
+                        .totalAmount {
+                            font-size: 14px;
+                            color: #fff;
+                            background-color: #0043a4;
+                            padding: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 4px;
+                            p {
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .itinenaryShare {
+                        // border: 1px solid;
+                        padding-top: 16px;
+                        label {
+                            font-size: 12px;
+                            font-weight: 550;
+                            color: #0043a4;
+                            margin-bottom: 8px;
+                        }
+                        &__input {
+                            // border: 1px solid;
+                            display: flex;
+                            // flex-direction: row !important;
+
+                            input[type="email"] {
+                                width: 100%;
+                                border: 1px solid #c8c8c8;
+                                padding: 4px 8px;
+                                outline: none;
+                                font-size: 12px;
+                                &:hover {
+                                    border: 1px solid #1890ff;
+                                }
+                                &:focus {
+                                    border: 1px solid #1890ff;
+                                }
+                            }
+                            .sendBtn {
+                                padding: 4px 12px;
+                                background-color: #0043a4;
+                                color: #fff;
+                                font-weight: 550;
+                                &:hover {
+                                    background-color: #fca62b;
+                                    color: #0043a4;
+                                    border: none;
+                                }
+                            }
+                            .itinenaryShareform {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                width: 100%;
+                                height: 36px;
+                                .ant-form-item-explain-error {
+                                    padding-top: 2px;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .baggageInfoContainer {
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    background-color: rgba(#1890ff, 0.1);
+                    border: 1px solid rgba(#1890ff, 0.4);
+                    margin: 10px 0;
+                    padding: 8px;
+                    color: #0043a4;
+                    p {
+                        font-size: 12px !important;
+                        font-weight: 500;
+                        line-height: 12px;
+                    }
+                    svg {
+                        color: #0043a4;
+                    }
+                }
+            }
+        }
+    }
+
+    /* .BodyContent {
+} */
+
+    .content {
+        // border: 1px solid #000;
+        @include d-flex();
+    }
+    .content span,
+    .content .waitingTime {
+        color: #fca62b !important;
+    }
+    .content .waiting {
+        display: flex;
+    }
+
+    .noData {
+        padding: 32px;
+        display: flex;
+        justify-content: center;
+        border: 2px solid rgba(24, 143, 255, 0.455);
+        color: #1890ff;
+    }
+
+    .active {
+        background-color: #0043a4;
+        color: #fff;
+        p {
+            color: #fff;
+        }
+        &:hover {
+            background-color: #0043a4 !important;
+            // p{
+            //     color: #0043a4;
+            // }
+        }
+    }
+    .hide {
+        display: none;
+    }
+
+    .mFlightItineries {
+        // padding: 0px;
+        margin-bottom: 36px;
+        box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.06);
+        border-top: 2px solid #0043a4;
+        border-style: dashed;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+
+        &__itinerary {
+            // border: 2px solid #000;
+            cursor: pointer;
+            .mFlightType {
+                background-color: #d5edfe;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 8px 24px;
+
+                p {
+                    font-size: 12px !important;
+                    color: #2b2b2b;
+                }
+                .mLine {
+                    border: 0px solid rgba(#2b2b2b, 0.3);
+                    border-width: 0.2px;
+                    height: 14px;
+                }
+            }
+            .mFlightDetails {
+                padding: 24px;
+
+                &__airline {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: #0043a4;
+                    font-size: 18px;
+                    .image {
+                        display: inline-flex;
+                        img {
+                            height: 30px;
+                            width: 30px;
+                        }
+                    }
+                }
+                &__distanceDetails {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 16px;
+
+                    .iataArea {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        font-size: 18px;
+
+                        &__time {
+                            font-weight: 800;
+                        }
+                    }
+                    .durationDetails {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        align-items: center;
+                        width: 40%;
+
+                        &__time {
+                            display: flex;
+                            gap: 4px;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__totalAmount {
+            background-color: #d5edfe;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

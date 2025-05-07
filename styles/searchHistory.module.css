@@ -1,0 +1,3 @@
+.tableCustom > .ant-table-tbody > td.ant-table-cell{
+    border: 2px solid white !important;
+}

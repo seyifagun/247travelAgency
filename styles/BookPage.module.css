@@ -1,0 +1,277 @@
+.ant_modal_title_custom {
+    margin: 0;
+    color: #0043a4;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 22px;
+    word-wrap: break-word;
+  }
+  
+  .sort_div_custom{
+    background-color: #0043a4;
+    width: 60%;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+  }
+  
+  .actionPanelHeader{
+    background-color: #0043a4;
+    width : 100%;
+    padding:1.5rem 1rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+  
+  .priceHeader{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+  .resetLabel{
+    color:#fff;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .restIconCase{
+    padding: 0rem;
+  }
+  
+  /* ******************************************** */
+  .priceHeader{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+
+  .totalSummary{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background : #0043a4;
+    color: #fff;
+  }
+
+  .totalFig{
+    color: #fff;
+    text-align: left;
+    font-size: 13px;
+    padding : 0.5rem 1rem;
+    margin-bottom: 0rem;
+  }
+
+  .panelName{
+    color: #fff;
+    text-align: left;
+    font-size: 13px;
+  }
+  .priceName{
+    text-align : start;
+    font-size: 13px;
+  }
+  .ArrivalName{
+    text-align : end;
+    font-size: 13px;
+  }
+  .priceHike{
+    color:red;
+    font-size: 13px;
+  }
+
+  .flightStatusName{
+    color: #0043A4;
+    text-align : left;
+    font-size: 13px;
+    
+  }
+
+  .enquiryNum{
+    color: #0043A4;
+    text-align : left;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+
+  .flightFare{
+    color: #0043A4;
+    text-align : left;
+    font-size: 13px;
+  }
+  .flightStatusDate{
+    color: rgba(252, 166, 43, 0.8);
+    text-align : left;
+    font-size: 13px;
+  }
+
+  .bookingSummary{
+    /* border: 2px solid #0043a4; */
+    background-color: #fff;
+  }
+
+  .bookingSummarySubmenu { 
+    border-top: 2px solid #0043a4;
+
+  }
+
+  .bookingSummarySubmenu > p{
+      padding: 0.5rem 2rem;
+      margin-bottom: 0;
+      color: #0043a4;
+      font-size: 13px;
+  }
+
+  .passenger{
+      background-color: #0043a4;
+      color: rgba(252, 166, 43, 0.5);
+  }
+
+  .inputNameField{
+      /* border: 2px solid #0043a4;
+      box-shadow: 0px 15px 10px -15px #0043a4; */
+      max-height: 2.25rem;
+      width: 100%;
+      border: 2px solid #0043a4;
+  }
+
+  .bookPageInput{
+    border: 2.5px solid #0043a4 !important;
+    width: 100%;
+
+  }
+  
+
+  .inputAntd{
+      height : 2.5rem;  
+  }
+
+  .dropdownAntd{
+      height : 3rem; 
+      width: 100%; 
+      color: grey;
+      background: #fff !important;
+      border-color: none ;
+  }
+ 
+  .arrivalRow{
+    display: flex;
+    align-items: center;
+  }
+
+  .fetchOutput {
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0043a4;
+}
+
+.locationCode{
+    color : #0043a4;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.arrivalTime{
+    color : #0043a4;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-align: center;
+}
+  
+.containercustom{
+  background-color: rgba(0, 149, 255, 0.1);
+}
+
+
+/* ******************************************** */
+  
+  .departureArrivalTime{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .departureTime{
+    font-weight:700;
+    color : #0043a4;
+    margin-bottom: 0px !important;
+  }
+  .departureAlpha{
+    color : #0043a4;
+  }
+  .departureClass{
+    color:#0043a4;
+    font-size: 15px;
+  }
+  
+  .departurePrice{
+    font-weight:700;
+    color : #0043a4;
+    font-size: 15px;
+  }
+  .bookBtn{
+    background:#0043a4;
+    padding:0.5rem 1rem;
+    text-align: center;
+    color:#fff;
+    font-weight: 600;
+  }
+  
+  .bookBtn:hover{
+    font-weight : 800;
+    background:#0043a4
+  }
+  
+  .airlineIconCase{
+    padding : 0.5rem;
+  }
+  .clockHours{
+    display : flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .timeLabel{
+    font-size:9px;
+  }
+  .sliderAntd{
+    margin: 0;
+  }
+  
+  .oneStop{
+    text-align: center;
+  }
+  
+  .stopsDiv{
+    border: 1px solid brown;
+  box-sizing: border-box;
+  background: #fff;
+  width: 50%;
+  margin: 0 auto;
+  color: #0043a4;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .cheapflightStyle{
+    line-height: normal;
+    padding-left: 0.4rem;
+  }
+  
+  .btnAnt{
+    color: #fff;
+    background-color: #0043a4;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  .termsCondition{
+    /* justify-content: space-between; */
+    /* display: flex;
+    align-items: center; */
+    text-align: right;
+  }

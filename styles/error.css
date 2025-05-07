@@ -1,0 +1,20 @@
+.error-div{
+    margin: 60px auto;
+    width: 50%;
+}
+
+.error-header{
+    color: hsl(215, 100%, 32%);
+    font-weight: 700;
+    display: block;
+}
+
+.error-detail{
+    color: #0043a4;
+    display: inline-block;
+}
+
+.inputData{
+    color: orange;
+
+}

@@ -1,0 +1,199 @@
+.antd-checkbox-custom-booking > span{
+    color: #0043a4;
+    width: max-content;
+}
+
+.ant-checkbox-inner{  
+    border-radius: 0;
+    height : 1.5em;
+    width:1.5em;
+}
+
+span.ant-modal-close-x{
+    color: #fff;
+}
+
+.ant-spin-dot-item{
+    background-color: orange;
+}
+/* ***************NEW STYLES FOR SEARCH FLIGHT SECTION************************* */
+.flightsearch-section-new {
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 5px 3px 10px #b88640;
+}
+
+.flight-search-btn-roundtrip{
+    background-color: #0043a4;
+    color: #fff;
+}
+
+.flightsearch-section-new{
+    margin: 1rem 0;
+}
+
+.flight-search-select-section {
+    display: flex;
+    width: 100%;
+    height: 2.85rem;
+    box-shadow: 0px 0px 0px 0px #fca62b !important;
+    background: #ffffff;   
+}
+
+.border-left{
+    border-left: 2px solid #b88640;
+    height:100%;
+}
+
+.flight-search-icon {
+    padding: 15px 12.5px;
+  }
+
+.aeroImg-config{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.classType-border{
+    color: #fff;
+    background-color: #0043a4;
+}
+
+/* .dropdown-border {
+    width: 17rem;
+    box-shadow: 0px 5px 5px 5px rgb(241 163 60 / 40%);
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    right: 68px;
+    top: 245px;
+    background: #fff;
+} */
+.dropdown-border {
+    width: 17rem;
+    -webkit-box-shadow: 0px 5px 5px 5px rgb(241 163 60 / 40%);
+    box-shadow: 0px 5px 5px 5px rgb(241 163 60 / 40%);
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    right: 225px;
+    top: 465px;
+    background: #fff;
+}
+.classType-div{
+    padding: 2rem;
+}
+.class-block{
+    color : #fff;
+    background: #0043a4;
+    margin: .75rem 0;
+    width : 100%
+}
+.pickNumofTraveler{
+    padding: .5rem 2rem ;
+}
+.passenger-styled-div {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    background: #ffffff;
+    border: 1px solid #0043a4;
+}
+.passenger-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    padding: 10px 15px;
+    /* border-left: 1px solid #0043a4; */
+}
+
+button.ant-btn.invert-btn{
+    transform:rotate(270deg);
+}
+
+/* MEDIA QUERY FOR ROUNDTRIP FLIGHT SEARCH SECTION */
+
+@media screen and (min-width:320px) and (max-width:425px){
+    .flightsearch-parent{
+        padding:0;
+    }
+    .flight, .flightsearch-btn{
+        margin-top: 0 !important;
+        margin-bottom : 0 !important;
+    }
+    .passenger-content {
+        padding: 5px 10px !important;
+    }
+    .addflight-div {
+        flex-direction: column;
+    }
+    .checkbox-flex-div{
+        width : 100% !important;
+        display:block !important;
+        margin-bottom:1rem;
+    }
+    .ant-form-item-control-input-content {
+        justify-content: center;
+    }
+    a#basic-nav-dropdown {
+        margin-bottom: 1rem;
+    }
+    .roundtrip-label{
+        display: none;
+    }
+    .booksection-inner-field, .booksection-field{
+        padding: 0;
+    }
+    .passengerInfo, .flightdestination-div {
+        padding: 0;
+    }
+    .flight{
+        padding:10px;
+    }
+}
+
+@media screen and (min-width:426px) and (max-width:991px){
+    .roundtrip-label{
+        font-size:12px;
+    }
+    a#basic-nav-dropdown {
+        margin-bottom: 1rem;
+    }
+    .checkbox-flex-div{
+        width : 100% !important;
+    }
+    .flight, .flightsearch-btn{
+        margin-top: 0 !important;
+        margin-bottom : 0 !important;
+    }
+    .flightsearch-parent {
+        padding: 0;
+    }
+    .roundtrip-label{
+        display: none;
+    }
+    .flight{
+        padding:10px;
+    }
+    .passenger-label-small, .passenger-label{
+        font-size:10px !important;
+      }
+      .addflight-div {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+    .passenger-content {
+        padding: 5px 10px !important;
+    }
+    .flight{
+        padding:10px;
+    }
+    .checkbox-flex-div{
+        width : 100% !important;
+    }
+}

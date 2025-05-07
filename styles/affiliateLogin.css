@@ -1,0 +1,90 @@
+.form-control.affiliate-input{
+    box-shadow: 0 1px 10px rgba(21 100 211 / 50%)!important;
+}
+
+.forgot-password-div{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    align-items: baseline;
+}
+
+.login-form-button{
+    display:flex;
+    justify-content:center;
+}
+
+.form-control.affiliate-input.custom-input{
+    height: 45px;
+}
+
+.btn.btn-primary.affiliate-login-btn{
+    color: #fff !important;
+}
+
+.small-right > small{
+    font-size: 10px;
+}
+
+.create-acc-small{
+    font-size: 10px;
+    color:orange;
+    font-weight: 700;
+}
+/* ***********************************MEDIA QUERY******************************* */
+
+@media screen and (max-width:375px) {
+    .card-body.custom-made{
+        padding: 0!important;
+    }
+
+    .small-right{
+        text-align: end;
+    }
+}
+
+@media screen and (min-width:376px) and (max-width:424px) {
+    .card-body.custom-made{
+        padding:0.5rem !important;
+    }
+    .small-right{
+        text-align: end;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width:767px) {
+    .card-body.custom-made{
+        padding:3rem !important;
+    }
+    .small-right{
+        text-align: end;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .card-body.custom-made{
+        padding:0rem !important;
+    }
+    /* .form-group.input-field{
+        padding: 0.5rem !important;
+    } */
+    .small-right{
+        text-align: end;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1439px) {
+    .card-body.custom-made{
+        padding:0.5rem !important;
+    }
+    .small-right{
+        text-align: end;
+    }
+}
+
+@media screen and (min-width:1440px) and (max-width:2540px) {
+    .small-right{
+        text-align: end;
+    }
+}

@@ -1,0 +1,65 @@
+.flightNavWrapper{
+    padding:0.5rem;
+    box-shadow: 0px 0px 6px 1px rgba(252, 166, 43, 0.3) !important;
+    /* margin-bottom: 3rem; */
+    border: 1px solid rgba(252, 166, 43, 0.5) ;
+    background: #fff;
+}
+
+.airportName{
+    margin-bottom:0rem;
+    font-size: 12px !important;
+    color: #0043a4;
+}
+
+.tofroCase{
+    display: inline !important;
+    margin: 0 0.25rem;
+}
+
+.date{
+    font-size: 11.5px !important;
+    text-align: center;
+    margin-bottom:0rem;
+    color: #0043a4;
+}
+
+/* .dateCase{
+    border-left: 2px solid orange;
+    border-right: 2px solid orange;
+    padding: 0 .2rem;
+} */
+
+.class{
+    font-size: 15px;
+    color: #0043a4;
+}
+
+.classCase{
+    /* border-right: 2px solid orange; */
+    padding: 0 0.2rem;
+}
+
+.modifyBtn{
+    background: #0043a4 !important;
+    font-weight: 600;
+    color:#fff;
+}
+
+.locations{
+    display: inline;
+    padding-left: 0.5rem;
+}
+
+.destinationOrigin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adultNum, .infantNum, .childNum{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 11.5px !important
+}

@@ -1,0 +1,55 @@
+th.ant-table-cell {
+    background-color: #0043a4 !important;
+    color: #fff !important;
+  }
+  
+  .e-content {
+    position: relative;
+  }
+  
+  /* custom scrollbar */
+  
+  ::-webkit-scrollbar {
+    width: 25px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgba(231, 122, 26, 0.02);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(87, 86, 86, 0.3);
+    border-radius: 0px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(87, 86, 86, 0.5);
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+    background-color: rgba(87, 86, 86, 0.7);
+  }
+  
+  * {
+    scrollbar-color: rgba(87, 86, 86, 0.3) rgba(231, 122, 26, 0.02);
+    scrollbar-width: 15px;
+  }
+  
+  *:hover {
+    scrollbar-color: rgba(87, 86, 86, 0.5) rgba(231, 122, 26, 0.02);
+  }
+  
+  *:active {
+    scrollbar-color: rgba(87, 86, 86, 0.7) rgba(231, 122, 26, 0.02);
+  }
+
+.tr:nth-child(even){
+    background-color: #0043a4;
+};
+
+.ant-spin-container {
+    border: none !important;
+}
+  

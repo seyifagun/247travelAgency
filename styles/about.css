@@ -1,0 +1,42 @@
+@media screen and (max-width:991px) {
+    h3.about247-heading {
+        width: 100%;
+        color: #0043a4;
+        font-weight: 600;
+        text-align: center;
+    }
+    p.about247-p {
+        width: 100%;
+        margin: 1rem 0;
+        font-size: 20px;
+    }
+    .about247-card.card-1, .about247-card.mb-2 {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1399px) {
+    .about247-card-unique {
+        width: 300px;
+        height: 400px;
+    }
+    .about247-card {
+        width: 250px;
+        height: 350px;
+    }
+    .about247-card.card-1, .about247-card.mb-2 {
+        margin: 0 auto;
+    }
+    h3.about247-heading {
+        width: 100%;
+        color: #0043a4;
+        font-weight: 600;
+        text-align: center;
+        font-size: 30px !important;
+    }
+    p.about247-p {
+        width: 100%;
+        margin: 1rem 0;
+        font-size: 20px;
+    }
+}

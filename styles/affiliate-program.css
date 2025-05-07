@@ -1,0 +1,159 @@
+section.ant-layout {
+    background: #edf8ff;
+}
+
+.ant-layout-header {
+    height: 20px;
+    padding: 0 50px;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 64px;
+    background-color: #edf8ff;
+}
+
+.ant-layout-sider-children {
+    height: 100%;
+    margin-top: 50px;
+    padding-top: 0.1px;
+}
+
+.ant-layout-sider.ant-layout-sider-dark{
+    flex: 0 0 200px;
+    /* max-width: 200px; */
+    min-width: 300px !important;
+    width: 200px;
+    background-color: #fff;
+}
+
+.ant-menu.ant-menu-dark {
+    color: #0043a4;
+    background: #fff;
+}
+
+.ant-menu-vertical > .ant-menu-item, .ant-menu-vertical-left > .ant-menu-item, 
+.ant-menu-vertical-right > .ant-menu-item, .ant-menu-inline > .ant-menu-item, 
+.ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title, 
+.ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title, 
+.ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title, 
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+    height: 60px;
+    line-height: 40px;
+}
+
+/* .ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right 
+.ant-menu-item::after, .ant-menu-inline .ant-menu-item::after {
+    position: absolute;
+    top: 0;
+    left: 0 !important;
+    bottom: 0;
+    border-left: 3px solid #1890ff !important;
+} */
+
+.ant-menu-title-content h5{
+    color: #0043a4;
+    text-align: left;
+    display: inline-block;
+    padding-left:1rem
+}
+
+h5.sidebar-header{
+    color: #0043a4;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 30px;
+}
+
+h5.profile-header{
+    color: #0043a4 !important;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+/* ****************************** */
+.ad-container {
+    color: white;
+    background-color: #0095FF;
+    text-align: center;
+    height: 100%;
+    margin: 0 1rem;
+}
+
+.ad-container p{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.profile-username {
+    color: #FCA62B;
+    display: inline-block;
+    font-weight: 700;
+}
+
+h3.profile-prompt {
+    display: inline-block;
+    font-weight: 700;
+    color: white;
+}
+
+p.profile-comments {
+    color: white;
+}
+
+.profile-contact-container {
+    background: #0043a4;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+}
+.input-edit-container{
+    padding: 1rem 2rem;
+}
+
+.name-edit p{
+    font-weight: 700;
+    color  :#0043a4;
+    margin-bottom: 0rem !important;
+}
+
+p.profile-contact-info {
+    color: #0043a4;
+    font-weight: 600;
+}
+
+/* **********TRAVELERS************ */
+button.btn.btn-outline-primary.travelers-btn-custom{
+    color:#0043a4 !important;
+    font-size: 20px;
+    padding:  0.8rem 2rem !important;
+    background-color: transparent;
+    border: 2px solid #0043a4 !important;
+  }
+  button.btn.btn-outline-primary.travelers-btn-custom:hover {
+    padding: 0.8rem 2rem;
+    border: 2px solid #0043a4;
+    font-size: 20px;
+    color: #fff!important;
+    background-color: #0043a4;
+  }
+  .book-flight{
+      color: #0043a4 !important;
+  }
+  .book-flight:hover{
+    color: #fff !important;
+}
+
+.container.developernavbar-classname {
+    margin-left: 18rem;
+}
+
+.affiliate-profile-edit{
+    display: flex;
+}
+
+.profile-edit-btn{
+    left: 39rem;
+}
+
+button.ant-btn.profile-edit-btn {
+    color: #fff;
+    background: #0043a4;
+}

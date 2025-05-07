@@ -1,0 +1,16 @@
+.trackerLabel{
+    color: #0043a4;
+    margin-bottom: 0rem !important;
+    margin-top: 0.8rem;
+    font-size: 15px;
+}
+
+.startLabel{
+    transform: translateX(-30%) !important;
+    font-size: 11px;
+}
+
+.endLabel{
+    transform: translateX(-80%) !important;
+    font-size: 11px;
+}

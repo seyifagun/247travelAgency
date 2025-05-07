@@ -1,0 +1,104 @@
+@media screen and (max-width:767px) {
+    .contact-form {
+        padding: 0rem;
+    }
+
+    .contactform-div {
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-contact-info {
+        padding: 0;
+    }
+
+    .contact-info, .contact-intro {
+        padding: 20px;
+    }
+
+    .contact-p, .message-icon p, .call-icon p  {
+        width: 100%;
+        padding-left: .5rem;
+    }
+
+    .btn.bttn-custom {
+        width: auto;
+        height: auto;
+        font-size: 13px;
+    }
+
+    .card-text-area {
+        background-color: #0043a4;
+        padding: 1.5rem;
+    }
+
+    .tile-1 label, .tile-2 label, .tile-3 label {
+        font-size: 13px;
+    }
+
+    .tile-1, .tile-2, .tile-3{
+        margin-bottom: 0rem !important;
+    }
+    .tile-3{
+        margin-bottom: 1.5rem !important;
+    }
+
+    .location-icon, .call-icon, .message-icon{
+        padding-top: 0.5rem !important;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .card-contact-info {
+        padding: 0;
+    }
+
+    .contact-info, .contact-intro {
+        padding: 20px;
+    }
+
+    .card-text-area {
+        padding: 2rem;
+    }
+
+    .tile-1, .tile-2, .tile-3{
+        margin-bottom: 1rem !important;
+    }
+    .tile-3{
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1439px){
+    .contactform-div {
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .card-contact-info {
+        padding: 0;
+    }
+
+    .contact-info, .contact-intro {
+        padding: 20px;
+    }
+
+    .contact-p {
+        width: 100%;
+    }
+
+    .tile-1 label, .tile-2 label, .tile-3 label {
+        font-size: 1.0rem;
+    }
+
+    .card-text-area {
+        padding: 2rem;
+    }
+
+    .btn.bttn-custom {
+        width: 100px;
+        height: auto;
+        font-size: 15px;
+    }
+}
+   

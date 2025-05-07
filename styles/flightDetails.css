@@ -1,0 +1,45 @@
+.baggage-bloc-tabs{
+    display: flex;  
+}
+
+.baggage-tab {
+    margin: 1rem 0 0 0;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    color: #0043a4;
+}
+
+.active-baggage-tab:after{
+    content: '';
+    position: absolute;
+    width: 70%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0043a4;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.baggage-content-tabs {
+    flex-grow : 1;
+}   
+
+.baggage-active-content{
+    border: 1px dotted #000;
+    display: block;
+}
+
+@media screen and (min-width:769px){
+    .flightdetails-itinenary{
+        padding: 0 3rem;
+    }
+}
+@media screen and (min-width:1440px){
+    .flightdetails-itinenary{
+        padding: 0 5rem;
+    }
+}

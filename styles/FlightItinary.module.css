@@ -1,0 +1,20 @@
+.fareBaseSegmentDeparture > p{
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.fareBaseSegmentDeparture{
+    padding: 0.5rem 0;
+    text-align: center;
+
+}
+.fareBaseSegmentArrival > p{
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.fareBaseSegmentArrival {
+    padding: 0.5rem 0;
+    text-align: center;
+
+}

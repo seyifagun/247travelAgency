@@ -1,0 +1,16 @@
+.infoContainer{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+
+.infoParagraph{
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.infoTitle{
+    margin-bottom: 0;
+    font-size : 22px;
+    color: #0043a4;
+}

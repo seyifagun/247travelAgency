@@ -1,0 +1,128 @@
+@mixin d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notificationContainer {
+    position: fixed;
+    z-index: 5;
+    top: 8px;
+    right: 0.5%;
+    animation: slideIn 0.4s linear;
+
+    @keyframes slideIn {
+        0% {
+            right: -100%;
+        }
+        100% {
+            right: 0.5%;
+        }
+    }
+}
+.notificationContainerClose {
+    // @extend .notificationContainer;
+    position: fixed;
+    z-index: 5;
+    top: 8px;
+    right: -100%;
+    animation: slideOut 0.4s ease-in-out;
+
+    @keyframes slideOut {
+        0% {
+            right: 2%;
+        }
+        100% {
+            right: -100%;
+        }
+    }
+}
+
+
+.cContainer {
+    padding: 16px;
+    width: 386px;
+    background-color: #e8f1ff;
+    color: #0043a4;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    z-index: 45;
+
+    p, h1, h2, h3, h4 {
+        padding: 0;
+        margin: 0;
+    }
+
+    &__icon {
+        background-color: #0043a4;
+        width: 44px;
+        height: 44px;
+        border-radius: 100%;
+        @include d-flex-center();
+        svg {
+            color: #ffffff;
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &__text {
+            line-height: normal;
+        .cardTitle {
+            width: 250px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+            // border: 1px solid #000;
+        }
+        .cardMessage {
+            font-size: 16px;
+            width: 250px;
+        }
+    }
+    &__close {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        // background-color: #ffffff;
+        border: 1px solid rgba(#0043a4, 0.2);
+        cursor: pointer;
+        @include d-flex-center();
+        &:hover {
+            border: 1px solid rgba(#0043a4, 0.5);
+        }
+        svg {
+            width: 16px;
+            height: 16px;
+            transition: all 0.2s ease;
+            path {
+                stroke: #0043a4;
+            }
+        }
+    }
+}
+
+.ScContainer, .EcContainer, .WcContainer {
+    @extend .cContainer;
+}
+
+.EcContainer {
+    background-color: #ffe8e8;
+    &__text {
+        .cardTitle {
+            color: #ed1000;
+        }
+    }
+}
+.WcContainer {
+    background-color: #fffbe8;
+}
+
+// .cContainerFade {
+//     @extend .cContainer;
+//     right: 60%;
+// }
+
+// .mcContainer {
+//     // position: fixed;
+// }

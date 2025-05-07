@@ -1,0 +1,471 @@
+@mixin input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 16px 12px;
+    color: #0043a4;
+    &::placeholder {
+        color: #0043a4 !important;
+    }
+}
+@mixin dropdownAnimInitial {
+    top: 20px;
+    opacity: 0;
+    z-index: 0;
+}
+@mixin dropdownAnimFinal {
+    top: 42px;
+    opacity: 1;
+    z-index: 1;
+}
+
+// .christmasFill {
+//     display: inline-block;
+//     position: relative;
+//     width: 100%;
+//     & .bannerImg {
+//         z-index: -1;
+//     }
+// }
+
+.mobileContainer {
+    background-color: rgba(0, 67, 164, 1.0);
+    // background-image: linear-gradient(transparent, rgba(0, 67, 164, 0.9));
+    user-select: none;
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        &__topBar {
+            padding: 24px 0px;
+            // padding-top: 48px;
+            h2 {
+                font-size: 24px;
+                color: #ffffff;
+            }
+        }
+    }
+}
+.mSearchPanelContainer {
+    // padding-top: 16px;
+    padding-bottom: 48px;
+    // border: 1px solid #fff;
+    transition: all 300ms ease !important;
+
+    &__mSetSpData {
+        // border: 1px solid #fff;
+        // background-color: #004cb8;
+        .mSetSpCategories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: #004cb8;
+            margin-bottom: 18px;
+            position: relative;
+            p {
+                // grid-column: span 4;
+                padding: 8px;
+                text-align: center;
+                color: #ffffff;
+                z-index: 1;
+            }
+            // .active {
+            //     // background-color: #0095ff;
+            // }
+            &__indicator {
+                position: absolute;
+                top: 0;
+                // width: ;
+                background-color: #0095ff;
+                content: "";
+                width: 33.34%;
+                height: 100%;
+                z-index: 0;
+                transition: all 300ms ease;
+                // left: 0%;
+                // left: 33.5%;
+                // left: 66.5%;
+            }
+        }
+        .mSetSpSelection {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            // &__class {
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     gap: 4px;
+            //     background-color: #0095ff;
+            //     color: #ffffff;
+            //     padding: 8px;
+            //     svg {
+            //         color: #fca62b;
+            //     }
+            // }
+            &__passenger,
+            &__class {
+                position: relative;
+                .mSpPassengersSelectedItem {
+                    // border: 1px solid #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4px;
+                    background-color: #0095ff;
+                    color: #ffffff;
+                    padding: 8px;
+                    svg {
+                        color: #fca62b;
+                    }
+                }
+                .spDropdown {
+                    position: absolute;
+                    background-color: #fff;
+                    width: 201%;
+                    // width: 100%;
+                    z-index: 2;
+                    // padding: 8px;
+                    top: 42px;
+                    animation: passengersDropDown 600ms cubic-bezier(0.91, -0.09, 0, 1.13);
+                    @keyframes passengersDropDown {
+                        0% {
+                            @include dropdownAnimInitial();
+                        }
+                        100% {
+                            @include dropdownAnimFinal();
+                        }
+                    }
+
+                    .spPassengersEachItem {
+                        // border: 1px solid #000;
+                        color: #0043a4;
+                        padding: 16px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .spPassengerType {
+                            // @include text-reset();
+                            // border: 1px solid #000;
+                            height: fit-content;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+                            width: 100%;
+                            p {
+                                font-size: 16px !important;
+                                // border: 1px solid #000;
+                                line-height: 14px;
+                            }
+                            span {
+                                font-size: 12px;
+                                line-height: 10px;
+                                // border: 1px solid #000;
+                                color: rgba(#0043a4, 0.6);
+                            }
+                            &:hover {
+                                span {
+                                    color: #0043a4;
+                                }
+                            }
+                        }
+                        .spPassengerCounter {
+                            display: flex;
+                            position: relative;
+                            &__minus,
+                            &__currentCount,
+                            &__plus {
+                                width: 32px;
+                                height: 32px;
+                                border: 0px solid rgba(#0043a4, 0.4);
+                                border-width: 0.3px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                user-select: none;
+                                &:hover {
+                                    background-color: rgba(#0043a4, 0.05);
+                                }
+                            }
+                            &__plus {
+                                color: #fca62b;
+                            }
+                            &__plus,
+                            &__minus {
+                                font-size: 24px;
+                            }
+                            .spTooltip {
+                                position: absolute;
+                                bottom: 30px;
+                                right: -28%;
+                                font-size: 12px;
+                                line-height: 15px;
+                                background-color: rgba(#000000, 0.6);
+                                color: #fff;
+                                clip-path: polygon(0 0, 100% 0, 100% 95%, 55% 95%, 50% 100%, 45% 95%, 0 95%);
+                                width: 140px;
+                                // max-height: 44px;
+                                text-align: center;
+                                padding: 4px;
+                                z-index: 5;
+                                padding-bottom: 8px;
+                                padding-top: 8px;
+                                animation: fadeIn 100ms ease-in;
+                                @keyframes fadeIn {
+                                    0% {
+                                        opacity: 0;
+                                    }
+                                    100% {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                            &__currentCount {
+                                border-right: none;
+                                border-left: none;
+                                &:hover {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                    .btn {
+                        display: flex;
+                        width: fit-content;
+                        margin: auto;
+                        margin-bottom: 12px;
+                        color: #fff;
+                    }
+                }
+            }
+            &__class {
+                .spDropdown {
+                    right: 0;
+                    .spEconomyEachItem {
+                        position: relative;
+                        cursor: pointer;
+                        // border: 1px solid #000;
+                        input[type="radio"] {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+                        p {
+                            border-bottom: 1px solid #0095ff;
+                            padding: 12px 16px;
+                            color: #0043a4;
+                            font-size: 14px;
+                            // border-bottom: none;
+                            // &:last-child {
+                            //     border: 1px solid #0095ff;
+                            // }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__mSetEntryData {
+        .location {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 0;
+            margin-top: 24px;
+            position: relative;
+            &__mLocationContainer {
+                // border: 1px solid #fff;
+                height: fit-content;
+                width: 100%;
+                position: relative;
+                input {
+                    @include input();
+                }
+
+                .locationContainer__results {
+                    position: absolute;
+                    background-color: #ffffff;
+                    // background-color: transparent;
+                    z-index: 2;
+                    width: 100%;
+                    top: 54px;
+                    max-height: 64px * 3.5;
+                    height: fit-content;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    &::-webkit-scrollbar {
+                        width: 8px;
+                        background-color: #0095ff;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        width: 100%;
+                        border: 1px solid #fff;
+                        background-color: #fff;
+                    }
+                    .eachLoactionResult {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        padding: 10px;
+                        background-color: #ffffff;
+                        &__content {
+                            p {
+                                font-weight: 550;
+                                font-size: 14px !important;
+                                // border: 1px solid #000;
+                            }
+                            span {
+                                // font-weight: 400;
+                                font-size: 12px;
+                                // width: 200px;
+                                white-space: nowrap;
+                                // display: inline-block;
+                                color: rgba(#0043a4, 0.6);
+                            }
+                        }
+                        &__tag {
+                            padding: 6px;
+                            border: 1px solid #0095ff;
+                            font-size: 12px;
+                            line-height: 12px;
+                            color: #0043a4;
+                        }
+                        &:hover {
+                            background-color: rgba(#0095ff, 0.05);
+                            cursor: pointer;
+                            color: #0043a4;
+                            .eachLoactionResult__content {
+                                span {
+                                    color: rgba(#0043a4, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__mLocationIcon {
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                background-color: #0095ff;
+                position: absolute;
+                right: 12px;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                z-index: 1;
+                svg {
+                    width: 28px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }
+        }
+        .date {
+            margin-top: 16px;
+            // border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            input {
+                @include input();
+                background-color: #fff;
+            }
+        }
+    }
+    &__mSpOptionsContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 24px;
+        position: relative;
+        z-index: 0;
+        .left,
+        .left > div {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #fca62b;
+        }
+        .left {
+            gap: 12px;
+        }
+        .right {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            .spOptionsContainerOption {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                color: #fff;
+                position: relative;
+                z-index: 0;
+                p {
+                    font-size: 14px;
+                }
+                input[type="checkbox"] {
+                    // display: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    z-index: 1;
+                    cursor: pointer;
+                }
+                input[type="checkbox"]:checked ~ .spOptionsContainerOption__checker {
+                    background-color: #fca62b;
+                    svg {
+                        display: block;
+                    }
+                }
+                &__checker {
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #fca62b;
+                    position: relative;
+                    background-color: transparent;
+                    svg {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: 18px;
+                        height: 18px;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .btn {
+        background-color: #fca62b;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 24px;
+        padding: 12px 24px;
+        position: relative;
+        z-index: 0;
+    }
+}

@@ -1,0 +1,18 @@
+.airline-name-query{
+    display: flex;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .itenerary-segment-query{
+        border: 1px dotted #0043a4;
+        padding: 0 0.1rem;
+    } 
+    .airline-name-query{
+        display: none;
+    }
+    .departure-city, .arrival-city{
+        font-size: 12px !important;
+    }
+}
+

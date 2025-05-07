@@ -1,0 +1,27 @@
+#modal_login {
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    place-content: center;
+    min-height: 50vh;
+    padding: 0rem 2.5rem;
+}
+.ant-modal-mask {
+    background: rgba(0, 67, 164, .41);
+}
+
+.ant-modal-content {
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.ant-modal-title {
+    color: #0043a4;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.ant-modal-header {
+    padding: 30px 25px;
+    /* border-bottom: 0px solid #f0f0f0; */
+}

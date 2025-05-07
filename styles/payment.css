@@ -1,0 +1,183 @@
+.pay-btn{
+    background-color:orange;
+    color: white;
+    height: 40px;
+    width: 100%;
+    
+}
+
+.pay-btn:hover{
+    background-color:#0043a4;
+    color: white;
+    height: 40px;
+}
+
+.pay-btn:focus {
+    color: #fff;
+    background-color: #0043a4;
+}
+
+.bankAccountWrapper {
+    padding: 20px;
+    border-left: 4px solid orange;
+    font-size: 15px;
+    background-color: rgba(0, 149, 255, 0.102);
+    border-radius: 3px;
+}
+
+.generatedTotal{
+    display:flex;
+    flex-direction:column;
+    border: 1px solid #0043a4;
+    padding: 1rem;
+    width: 65%;
+    border-left: 3px solid orange;
+    font-weight: 600;
+    color: grey;
+}
+
+.payment-type{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+button.ant-btn.pay-btn.secure-payment-btn {
+    width: 50%;
+}
+
+.pay-btn-wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.spinner-center{
+    text-align: center;
+}
+@media screen and (min-width:768px) {
+    .bankTransferDiv-query-mobile, .bankTransferDiv-queryMobile{
+        display: none;
+    }
+
+    .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active, 
+    .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab-active {
+        width: 250px;
+        height: 150px;
+        background: #0043a4 !important;
+        padding: 1rem;
+        box-shadow: 1px 2px 4px rgba(0, 149, 255, 0.7);
+    }
+    /* .tabPayLaterDiv{
+        width: 250px;
+        height: 150px;
+        background: #fff;
+        padding: 1rem;
+        color: #0043a4;
+        box-shadow: 1px 2px 4px rgba(0, 149, 255, 0.7);
+    }
+    .tabPayCardDiv{
+        width: 250px;
+        height: 150px;
+        background: #fff;
+        padding: 1rem;
+        color: #0043a4;
+        box-shadow: 1px 2px 4px rgba(0, 149, 255, 0.7);
+    }
+    .tabPayPayfiDiv{
+        width: 250px;
+        height: 150px;
+        background: #fff;
+        padding: 1rem;
+        color: #0043a4;
+        box-shadow: 1px 2px 4px rgba(0, 149, 255, 0.7);
+    } */
+    
+    .transfer-img-div{
+        top: 60px;
+    }
+    
+    .arrow-down {
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #0043a4;
+        text-align: center;
+        margin: 0 auto;
+      }
+     .selectPaymentOption{
+         background: #0043a4;
+         color:#fff;
+         width: 15rem;
+         text-align: center;
+         padding:1rem;
+     }
+    
+     .payment-platforms{
+         width: 80%;
+         margin: 0 auto;
+     }
+     .mobile-transfer-platform{
+         display: none;
+     } 
+     .bankAccountWrapper-query-text-desktop{
+         display: none;
+     }
+     .drawercustom-mobile{
+         display:none;
+     }
+     
+}
+
+
+ /* @MEDIA QUERY */
+ @media  screen and (min-width : 320px) and (max-width: 768px) {
+
+    .drawercustom-desktop{
+        display: none;
+    }
+
+    .ant-drawer-content-wrapper{
+        width: 100% !important;
+    }
+     
+    .bankTransferDiv-query-desktop, .strongTransferText, .bankTransferDiv-query-desktop{
+    display: none;
+    }
+
+    .payment-platforms-mobile{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .desktop-transfer-platform{
+        display: none;
+    }
+     .transfer-img-div{
+         display: none;
+     }
+    .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active, .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav 
+    .ant-tabs-tab-active {
+        border-bottom-color: transparent !important;
+        height: 50px;
+        border-radius: 30px 30px 0px 0px;
+        background: #0043a4;
+        padding: 0 1rem !important;
+    }
+     .bankAccountWrapper{
+         display: none;
+     }
+     .bankAccountWrapper-query{
+         width: 100%;
+         background: #0043a4;
+         padding: 1rem 1rem;
+     }
+     .bankAccountWrapper-query-text{
+         margin-left: 1rem;
+         color: #fff;
+     }
+
+     .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        /* color: white !important; */
+        text-shadow: 0 0 0.25px currentColor;
+    }
+ }

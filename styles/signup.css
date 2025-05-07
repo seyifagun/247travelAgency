@@ -1,0 +1,53 @@
+span.ant-input-affix-wrapper.ant-input-password.mb-3.login-email {
+    box-shadow: 0 1px 10px rgb(21 100 211 / 50%);
+    height: 3rem;
+}
+span.ant-input-affix-wrapper.ant-input-password.mb-3.login-email > .ant-input-prefix {
+    margin-right: 1rem;
+}
+
+.ant-input-group.mb-3.login-email > .ant-select-selection-item{
+    box-shadow: 0 1px 10px rgb(21 100 211 / 50%);
+    height: 3rem;
+}
+
+.ant-select.mb-3.login-email.ant-select-single.ant-select-show-arrow {
+    box-shadow: 0 1px 10px rgb(21 100 211 / 50%);
+    padding: 5px 0;
+}
+
+.ant-input-wrapper.ant-input-group > .ant-input-group-addon{
+    padding: 0 !important;
+}
+
+.select-input{
+    padding: 1.5rem 0.5rem !important;
+}
+
+.signup-btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.name-title-field{
+    padding-left : 1rem;
+}
+.name-firstname-field{
+    padding-right : 1rem;
+}
+
+.title-select-field{
+    border-radius: 0rem;
+    border-right-color: transparent;
+    height: 46px;
+}
+
+@media screen and (min-width:320px) and (max-width: 1200px) {
+    .name-title-field {
+        padding: 1rem !important;
+    }
+    .name-firstname-field{
+        padding: 1rem !important;
+    }
+}
